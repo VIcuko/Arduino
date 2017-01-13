@@ -6,28 +6,29 @@ int n=0;
 int zumb=13;
 
 void setup() {
-  for (n=0;n<6;n++){
-    pinMode(leds[n],OUTPUT);
-    }
+    pinMode(zumb,OUTPUT);
 }
 
 void loop() {
-  digitalWrite(leds[0],HIGH);
-  digitalWrite(leds[5],HIGH);
-  delay(tiempo1);
-  digitalWrite(leds[5],LOW);
-  digitalWrite(leds[4],HIGH);
-  delay(tiempo2);
-  digitalWrite(leds[4],LOW);
-  digitalWrite(leds[3],HIGH);
-  digitalWrite(leds[0],LOW);
-  digitalWrite(leds[2],HIGH);
-  delay(tiempo1);
-  digitalWrite(leds[2],LOW);
-  digitalWrite(leds[1],HIGH);
-  delay(tiempo2);
-  digitalWrite(leds[1],LOW);
-  digitalWrite(leds[3],LOW);
+  for(n=0;n<3;n++){
+    digitalWrite(zumb,HIGH);
+    delay(corto);
+    digitalWrite(zumb,LOW);
+    delay(corto);
+    }
+  delay(pausa);
+  for(n=0;n<3;n++){
+    digitalWrite(zumb,HIGH);
+    delay(largo);
+    digitalWrite(zumb,LOW);
+    delay(corto);
+    }
+  delay(pausa);
+  for(n=0;n<3;n++){
+    digitalWrite(zumb,HIGH);
+    delay(corto);
+    digitalWrite(zumb,LOW);
+    delay(corto);
+    }
+  delay(espera);
 }
-
-
